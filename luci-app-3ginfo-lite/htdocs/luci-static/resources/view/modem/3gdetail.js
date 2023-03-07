@@ -24,22 +24,22 @@ var pc = Math.floor((100 / mn) * vn);
 		if (vn >= 20 && vn <= 31 ) 
 			{
 			pg.firstElementChild.style.background = 'lime';
-			var tip = _('Very good');
+			var tip = _('非常好');
 			};
 		if (vn >= 14 && vn <= 19) 
 			{
 			pg.firstElementChild.style.background = 'yellow';
-			var tip = _('Good');
+			var tip = _('好');
 			};
 		if (vn >= 10 && vn <= 13) 
 			{
 			pg.firstElementChild.style.background = 'darkorange';
-			var tip = _('Weak');
+			var tip = _('差');
 			};
 		if (vn <= 9 && vn >= 1) 
 			{
 			pg.firstElementChild.style.background = 'red';
-			var tip = _('Very weak');
+			var tip = _('非常差');
 			};
 pg.firstElementChild.style.width = pc + '%';
 pg.style.width = '33%';
@@ -56,22 +56,22 @@ var pc =  Math.floor(100*(1-(-50 - vn)/(-50 - mn)));
 		if (vn >= -74) 
 			{
 			pg.firstElementChild.style.background = 'lime';
-			var tip = _('Very good');
+			var tip = _('非常好');
 			};
 		if (vn >= -85 && vn <= -75) 
 			{
 			pg.firstElementChild.style.background = 'yellow';
-			var tip = _('Good');
+			var tip = _('好');
 			};
 		if (vn >= -93 && vn <= -86) 
 			{
 			pg.firstElementChild.style.background = 'darkorange';
-			var tip = _('Weak');
+			var tip = _('差');
 			};
 		if (vn < -94) 
 			{
 			pg.firstElementChild.style.background = 'red';
-			var tip = _('Very weak');
+			var tip = _('非常差');
 			};
 pg.firstElementChild.style.width = pc + '%';
 pg.style.width = '33%';
@@ -89,22 +89,22 @@ var pc =  Math.floor(120*(1-(-50 - vn)/(-50 - mn)));
 		if (vn >= -79 ) 
 			{
 			pg.firstElementChild.style.background = 'lime';
-			var tip = _('Very good');
+			var tip = _('非常好');
 			};
 		if (vn >= -90 && vn <= -80) 
 			{
 			pg.firstElementChild.style.background = 'yellow';
-			var tip = _('Good');
+			var tip = _('好');
 			};
 		if (vn >= -100 && vn <= -91) 
 			{
 			pg.firstElementChild.style.background = 'darkorange';
-			var tip = _('Weak');
+			var tip = _('差');
 			};
 		if (vn < -100) 
 			{
 			pg.firstElementChild.style.background = 'red';
-			var tip = _('Very weak');
+			var tip = _('非常差');
 			};
 pg.firstElementChild.style.width = pc + '%';
 pg.style.width = '33%';
@@ -120,22 +120,22 @@ var pc = Math.floor(100-(100*(1-((mn - vn)/(mn - 31)))));
 		if (vn >= 21 ) 
 			{
 			pg.firstElementChild.style.background = 'lime';
-			var tip = _('Excellent');
+			var tip = _('非常好');
 			};
 		if (vn >= 13 && vn <= 20)
 			{
 			pg.firstElementChild.style.background = 'yellow';
-			var tip = _('Good');
+			var tip = _('好');
 			};
 		if (vn > 0 && vn <= 12) 
 			{
 			pg.firstElementChild.style.background = 'darkorange';
-			var tip = _('Mid cell');
+			var tip = _('一般');
 			};
 		if (vn <= 0) 
 			{
 			pg.firstElementChild.style.background = 'red';
-			var tip = _('Cell edge');
+			var tip = _('差');
 			};
 pg.firstElementChild.style.width = pc + '%';
 pg.style.width = '33%';
@@ -152,22 +152,22 @@ if (vn > 0) { vn = 0; };
 		if (vn >= -9 ) 
 			{
 			pg.firstElementChild.style.background = 'lime';
-			var tip = _('Excellent');
+			var tip = _('非常好');
 			};
 		if (vn >= -15 && vn <= -10) 
 			{
 			pg.firstElementChild.style.background = 'yellow';
-			var tip = _('Good');
+			var tip = _('好');
 			};
 		if (vn >= -20 && vn <= -16) 
 			{
 			pg.firstElementChild.style.background = 'darkorange';
-			var tip = _('Mid cell');
+			var tip = _('一般');
 			};
 		if (vn < -20) 
 			{
 			pg.firstElementChild.style.background = 'red';
-			var tip = _('Cell edge');
+			var tip = _('差');
 			};
 pg.firstElementChild.style.width = pc + '%';
 pg.style.width = '33%';
@@ -216,7 +216,7 @@ return view.extend({
 						fs.exec('sleep 1');
 							if (json.signal == '0' || json.signal == '') {	
 							L.ui.showModal(_('3ginfo-lite'), [
-							E('p', { 'class': 'spinning' }, _('Waiting to read data from the modem...'))
+							E('p', { 'class': 'spinning' }, _('等待从Modem获取数据...'))
 							]);
 
 							window.setTimeout(function() {
@@ -238,7 +238,7 @@ return view.extend({
 						fs.exec('sleep 1');
 							if (json.signal == '0' || json.signal == '') {
 							L.ui.showModal(_('3ginfo-lite'), [
-							E('p', { 'class': 'spinning' }, _('Waiting to read data from the modem...'))
+							E('p', { 'class': 'spinning' }, _('等待从Modem获取数据...'))
 							]);
 
 							window.setTimeout(function() {
@@ -288,7 +288,7 @@ return view.extend({
 						}
 						else {
 						if (json.connt == '' || json.connt == '-') { 
-						view.innerHTML = String.format('<img style="width: 16px; height: 16px; vertical-align: middle;" src="%s"/>' + ' ' +_('Waiting for connection data...'), wicon, p);
+						view.innerHTML = String.format('<img style="width: 16px; height: 16px; vertical-align: middle;" src="%s"/>' + ' ' +_('正在获取连接信息...'), wicon, p);
 						}
 						else {
 						view.textContent = '⏱ '+ json.connt + ' | ↓' + json.connrx + ' ↑' + json.conntx;
@@ -306,7 +306,12 @@ return view.extend({
 						view.textContent = '-';
 						}
 						else {
-						view.textContent = json.operator_name;
+							if(json.operator_name='4E2D56FD75354FE1'){
+								view.textContent = '中国电信'
+							}
+							else{
+								view.textContent = json.operator_name;
+							}
 						}
 						}
 					}
@@ -321,19 +326,19 @@ return view.extend({
 						sv.style.visibility = "visible";
 						view.textContent = json.registration;
 						if (json.registration == '0') { 
-							view.textContent = _('Not registered');
+							view.textContent = _('未注册');
 						}
 						if (json.registration == '1' || json.registration == '6') { 
-							view.textContent = _('Registered');
+							view.textContent = _('已注册');
 						}
 						if (json.registration == '2') { 
-							view.textContent = _('Searching..');
+							view.textContent = _('正在搜索..');
 						}
 						if (json.registration == '3') { 
-							view.textContent = _('Registering denied');
+							view.textContent = _('注册被拒绝');
 						}
 						if (json.registration == '5' || json.registration == '7') { 
-							view.textContent = _('Registered (roaming)');
+							view.textContent = _('已注册 (漫游)');
 						}
 					}
 					}
@@ -687,18 +692,18 @@ return view.extend({
 		s.render = L.bind(function(view, section_id) {
 
 			return E('div', { 'class': 'cbi-section' }, [
-				E('h4', {}, [ _('General Information') ]),
+				E('h4', {}, [ _('基本信息') ]),
 			E('table', { 'class': 'table' }, [
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('Signal strength')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('信号强度')]),
 					E('td', { 'class': 'td left', 'id': 'signal' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('Operator')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('运营商')]),
 					E('td', { 'class': 'td left', 'id': 'operator' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('SIM status')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('SIM卡状态')]),
 					E('td', { 'class': 'td left'}, [
 						E('span', {
 							'class': 'ifacebadge',
@@ -722,45 +727,45 @@ return view.extend({
 						]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('Connection statistics')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('连接数据统计')]),
 					E('td', { 'class': 'td left', 'id': 'connst' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('Technology')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('网络制式')]),
 					E('td', { 'class': 'td left', 'id': 'mode' }, [ '-' ]),
 					]),
 			]),
-			E('h4', {}, [ _('Modem Information') ]),
+			E('h4', {}, [ _('Modem信息') ]),
 			E('table', { 'class': 'table' }, [
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('Modem type')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('Modem类型')]),
 					E('td', { 'class': 'td left', 'id': 'modem' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('Revision / Firmware')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('版本/固件')]),
 					E('td', { 'class': 'td left', 'id': 'fw' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('IP adress / Communication Port')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('IP地址/通讯端口')]),
 					E('td', { 'class': 'td left', 'id': 'cport' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('Protocol')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('协议')]),
 					E('td', { 'class': 'td left', 'id': 'protocol' }, [ '-' ]),
 					]),
 				E('tr', { 'id': 'tempn', 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('Chip Temperature')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('温度')]),
 					E('td', { 'class': 'td left', 'id': 'temp' }, [ '-' ]),
 					]),
 			]),
-			E('h4', {}, [ _('Cell / Signal Information') ]),
+			E('h4', {}, [ _('小区/信号信息') ]),
 			E('table', { 'class': 'table' }, [
 				E('tr', { 'class': 'tr' }, [
 					E('td', { 'class': 'td left', 'width': '33%' }, [ _('MCC MNC')]),
 					E('td', { 'class': 'td left', 'id': 'mccmnc' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('Cell ID')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('小区ID')]),
 					E('td', { 'class': 'td left', 'id': 'cid' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
@@ -775,7 +780,7 @@ return view.extend({
 				E('tr', { 'id': 'csqn', 'class': 'tr' }, [
 					E('td', { 'class': 'td left', 'width': '33%' }, [
 					_('CSQ'),
-					E('div', { 'style': 'text-align:left;font-size:66%' }, [ _('(Signal Strength)') ]),
+					E('div', { 'style': 'text-align:left;font-size:66%' }, [ _('(信号强度)') ]),
 					]),
 					E('td', { 'class': 'td' }, E('div', {
 							'id': 'csq',
@@ -787,7 +792,7 @@ return view.extend({
 				E('tr', { 'id': 'rssin', 'class': 'tr' }, [
 					E('td', { 'class': 'td left', 'width': '33%' }, [
 					_('RSSI'),
-					E('div', { 'style': 'text-align:left;font-size:66%' }, [ _('(Received Signal Strength Indicator)') ]),
+					E('div', { 'style': 'text-align:left;font-size:66%' }, [ _('(接收信号强度)') ]),
 					]),
 					E('td', { 'class': 'td' }, E('div', {
 							'id': 'rssi',
@@ -799,7 +804,7 @@ return view.extend({
 				E('tr', { 'id': 'rsrpn', 'class': 'tr' }, [
 					E('td', { 'class': 'td left', 'width': '33%' }, [
 					_('RSRP'),
-					E('div', { 'style': 'text-align:left;font-size:66%' }, [ _('(Reference Signal Receive Power)') ]),
+					E('div', { 'style': 'text-align:left;font-size:66%' }, [ _('(参考信号接收功率)') ]),
 					]),
 					E('td', { 'class': 'td' }, E('div', {
 							'id': 'rsrp',
@@ -811,7 +816,7 @@ return view.extend({
 				E('tr', { 'id': 'sinrn', 'class': 'tr' }, [
 					E('td', { 'class': 'td left', 'width': '33%' }, [
 					_('SINR'),
-					E('div', { 'style': 'text-align:left;font-size:66%' }, [ _('(Signal to Interference plus Noise Ratio)') ]),
+					E('div', { 'style': 'text-align:left;font-size:66%' }, [ _('(信噪比)') ]),
 					]),
 					E('td', { 'class': 'td' }, E('div', {
 							'id': 'sinr',
@@ -823,7 +828,7 @@ return view.extend({
 				E('tr', { 'id': 'rsrqn', 'class': 'tr' }, [
 					E('td', { 'class': 'td left', 'width': '33%' }, [
 					_('RSRQ'),
-					E('div', { 'style': 'text-align:left;font-size:66%' }, [ _('(Reference Signal Received Quality)') ]),
+					E('div', { 'style': 'text-align:left;font-size:66%' }, [ _('(参考信号接收质量)') ]),
 					]),
 					E('td', { 'class': 'td' }, E('div', {
 							'id': 'rsrq',
@@ -833,23 +838,23 @@ return view.extend({
 						))
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('Primary band | PCI & EARFCN')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('主频带 | PCI & EARFCN')]),
 					E('td', { 'class': 'td left', 'id': 'pband' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('CA band (S1)')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('载波聚合频带(S1)')]),
 					E('td', { 'class': 'td left', 'id': 's1band' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('CA band (S2)')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('载波聚合频带(S2)')]),
 					E('td', { 'class': 'td left', 'id': 's2band' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('CA band (S3)')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('载波聚合频带(S3)')]),
 					E('td', { 'class': 'td left', 'id': 's3band' }, [ '-' ]),
 					]),
 				E('tr', { 'class': 'tr' }, [
-					E('td', { 'class': 'td left', 'width': '33%' }, [ _('CA band (S4)')]),
+					E('td', { 'class': 'td left', 'width': '33%' }, [ _('载波聚合频带(S4)')]),
 					E('td', { 'class': 'td left', 'id': 's4band' }, [ '-' ]),
 					]),
 

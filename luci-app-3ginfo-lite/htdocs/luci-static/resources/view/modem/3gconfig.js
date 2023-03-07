@@ -23,28 +23,28 @@ return view.extend({
 
 	render: function(devs) {
 		var m, s, o;
-		m = new form.Map('3ginfo', _('Configuration 3ginfo-lite'), _('Configuration panel for the 3ginfo-lite application.'));
+		m = new form.Map('3ginfo', _('3ginfo-lite设置'), _('3ginfo-lite控制面板'));
 
 		s = m.section(form.TypedSection, '3ginfo', '', _(''));
 		s.anonymous = true;
 		
 		o = s.option(widgets.DeviceSelect, 'network', _('Interface'),
-		_('Network interface for Internet access.')
+		_('访问互联网的接口')
 		);
 		o.noaliases  = false;
 		o.default = 'wan';
 		o.rmempty = false;
 
 		o = s.option(form.Value, 'device', 
-			_('IP adress / Port for communication with the modem'), 
-			_("Select the appropriate settings. <br /> \
-				<br />Traditional modem. <br /> \
-				Select one of the available ttyUSBX ports.<br /> \
+			_('用于和modem通讯的IP地址/端口'),
+			_("选择正确的设置 <br /> \
+				<br />传统modem. <br /> \
+				选择正确的ttyUSBX接口 <br /> \
 				<br />HiLink modem. <br /> \
-				Enter the IP address 192.168.X.X under which the modem is available."));
+				输入modem的ip地址(通常是192.168.X.X)"));
 		devs.sort((a, b) => a.name > b.name);
 		devs.forEach(dev => o.value('/dev/' + dev.name));
-		o.placeholder = _('Please select a port');
+		o.placeholder = _('请选择端口');
 		o.rmempty = false
 
 		s = m.section(form.TypedSection, '3ginfo', _(''));
